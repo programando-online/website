@@ -41,7 +41,7 @@ jobs:
         uses: jsmrcaga/action-netlify-deploy@v2.0.0
         with:
           # Auth token to use with netlify
-          NETLIFY_AUTH_TOKEN: ${{ env.NETLIFY_TOKEN }}
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_TOKEN }}
           # Your Netlify site id
           NETLIFY_SITE_ID: 954bc5c4-fe39-4eeb-8b35-1a9a79276620
           # Should the site be deployed to production?
