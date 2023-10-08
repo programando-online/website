@@ -9,5 +9,5 @@ title: Changelog de Desenvolvimento
     - Primeiro commit
 - 2023-10-07 - Finalização da Versão 1.0
     - Finalização da versão estável do site.
-- 2023-09-27 - Início do desenvolvimento do gerador de sites estáticos
+- 2023-09-27 - Início do desenvolvimento do gerador de sites estáticos 1.0
     - Construção do core da aplicação em PHP e Javascript
