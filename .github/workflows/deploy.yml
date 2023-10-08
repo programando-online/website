@@ -1,0 +1,36 @@
+name: Deploy Website
+on:
+  push:
+    branches:
+      - master
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Set Node.js 18.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 18.x
+
+      - name: Node version
+        run: node --version
+
+      - name: NPM version
+        run: npm --version
+
+      - name: npm install
+        run: npm install
+
+      - name: PHP Version
+        run: php --version
+
+      - name: Install PHP dependencies
+        run: composer install --no-progress --no-dev --optimize-autoloader
+
+      - name: Execute Gen
+        run: php gen build
