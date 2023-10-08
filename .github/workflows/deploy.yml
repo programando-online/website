@@ -33,4 +33,4 @@ jobs:
         run: composer install --no-progress --no-dev --optimize-autoloader
 
       - name: Execute Gen
-        run: php gen build
+        run: php gen run
