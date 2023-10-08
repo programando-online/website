@@ -7,6 +7,7 @@ title: Changelog de Desenvolvimento
 - 2023-10-08 - Deploy no Github
     - Criação do repositório
     - Primeiro commit
+    - Criação da action
 - 2023-10-07 - Finalização da Versão 1.0
     - Finalização da versão estável do site.
 - 2023-09-27 - Início do desenvolvimento do gerador de sites estáticos 1.0
