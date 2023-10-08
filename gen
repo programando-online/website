@@ -1,0 +1,34 @@
+<?php
+use App\Application;
+use App\Config;
+
+require_once __DIR__ . "/vendor/autoload.php";
+
+if($argc > 1){
+    switch ($argv[1]) {
+        case 'run':
+                run();
+            break;
+        case 'watch':
+                run();
+                watch();
+            break;
+        default:
+                echo "Command not found!" . PHP_EOL;
+                echo "Aborting..." . PHP_EOL;
+            break;
+    }
+}
+
+function run(){
+    $app = new Application('./app/layout/default');
+    $app->run();
+}
+
+function watch(){
+    $config = new Config();
+    $url = str_replace('http://', '', $config->get('site', 'url'));
+    $url = str_replace('https://', '', $url);
+    $src = $config->get('output', 'dir');
+    exec('php -S ' . $url . ' -t ' . $src);
+}

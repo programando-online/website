@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cuprum:wght@500&family=Lato:wght@100;300;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.8.0/build/styles/ir-black.min.css">
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.8.0/build/highlight.min.js"></script>
+    <link rel="stylesheet" href="{{ url }}/assets/css/app.css" />
+    {% block style %}{% endblock %}
+</head>
+
+<body class="dark:bg-zinc-900 dark:text-gray-600">
+    <div id="main-loader" class="fixed flex items-center w-screen h-screen bg-white dark:bg-zinc-900 z-40 m-0">
+        <div class="flex items-center justify-center w-full relative gap-6 -z-50">
+            <span class="animate-ping inline-flex h-4 w-4 rounded-full bg-black opacity-75"></span>
+            <span class="animate-ping inline-flex h-4 w-4 rounded-full bg-black opacity-75"></span>
+            <span class="animate-ping inline-flex h-4 w-4 rounded-full bg-black opacity-75"></span>
+        </div>
+    </div>
+    <div class="max-w-4xl mx-auto p-4">
+        <header class="flex md:gap-24 items-center p-4 xx:flex-row flex-col bg-black text-amber-500 dark:bg-stone-950">
+            <a href="{{ url }}" class="text-4xl font-display grow text-amber-500 dark:text-amber-500 no-underline">{{ name }}</a>
+            <div>
+                <button id="theme-switcher" class="bg-transparent border-0 grow-0"><i data-feather="moon"></i></button>
+                <button id="search-show" class="bg-transparent border-0 grow-0"><i data-feather="search"></i></button>
+            </div>
+        </header>
+        <section class="flex flex-col xx:flex-row justify-between px-4 gap-2 mt-2">
+            <nav class="flex justify-center gap-3 py-2">
+                <a href="{{ url }}"
+                    class="hover:text-amber-500 dark:text-gray-500 dark:hover:text-amber-500 transition duration-300 ease-in-out no-underline">Início</a>
+                
+                {% for item in menu %}
+                <a href="{{ item['link'] }}"
+                    class="hover:text-amber-500 dark:text-gray-500 dark:hover:text-amber-500 transition duration-300 ease-in-out no-underline">{{ item['title'] }}</a>
+                {% endfor %}
+                <button id="tags-show"
+                    class="cursor-pointer hover:text-amber-500 dark:text-gray-500 dark:hover:text-amber-500 transition duration-300 ease-in-out">Tags</button>
+            </nav>
+            <nav class="flex justify-center gap-3 py-2">
+                <a href="{{ github }}" target="_blank" class="dark:text-gray-500 hover:text-amber-500 dark:hover:text-amber-500 transition duration-300 ease-in-out transition duration-300 ease-in-out"><i data-feather="github"></i></a>
+                <a href="{{ youtube }}" target="_blank" class="dark:text-gray-500 hover:text-amber-500 dark:hover:text-amber-500 transition duration-300 ease-in-out transition duration-300 ease-in-out"><i data-feather="youtube"></i></a>
+                <a href="{{ twitter }}" target="_blank" class="dark:text-gray-500 hover:text-amber-500 dark:hover:text-amber-500 transition duration-300 ease-in-out transition duration-300 ease-in-out"><i data-feather="twitter"></i></a>
+            </nav>
+        </section>
+        <main class="mt-2 relative">
+            {% block content %}{% endblock %}
+            
+            <footer class="my-4 p-3 bg-black text-cyan-50 dark:bg-stone-950">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-sm">
+                    <!-- <div class="mb-2">
+                        <h3 class="font-bold text-lg">Mais Lidos</h3>
+                        <div class="flex flex-col gap-2 mt-2">
+                            <a href="#" class="flex gap-2 hover:text-amber-500"><i data-feather="file-text"></i> Lorem ipsum dolor sit amet.</a>
+                            <a href="#" class="flex gap-2 hover:text-amber-500"><i data-feather="file-text"></i> Lorem ipsum dolor sit amet consectetur adipisicing.</a>
+                            <a href="#" class="flex gap-2 hover:text-amber-500"><i data-feather="file-text"></i> Lorem ipsum dolor sit.</a>
+                            <a href="#" class="flex gap-2 hover:text-amber-500"><i data-feather="file-text"></i> Lorem ipsum dolor sit amet consectetur.</a>
+                            <a href="#" class="flex gap-2 hover:text-amber-500"><i data-feather="file-text"></i> Lorem ipsum dolor sit amet.</a>
+                        </div>
+                    </div>
+                    <div class="mb-2">
+                        <h3 class="font-bold text-lg">Social e Contato</h3>
+                        <div class="flex flex-col gap-2 mt-2">
+                            <a href="{{ github }}" target="_blank" class="flex gap-2 hover:text-amber-500"><i data-feather="github"></i> Github</a>
+                            <a href="{{ youtube }}" target="_blank" class="flex gap-2 hover:text-amber-500"><i data-feather="youtube"></i>Youtube</a>
+                            <a href="{{ twitter }}" target="_blank" class="flex gap-2 hover:text-amber-500"><i data-feather="twitter"></i>Twitter</a>
+                            <a href="#" class="flex gap-2 hover:text-amber-500"><i data-feather="mail"></i>usuario@email.com</a>
+                        </div>
+                    </div>
+                    <div class="mb-2">
+                        <h3 class="font-bold text-lg">Vídeos</h3>
+                        <div class="flex flex-col gap-2 mt-2">
+                            <a href="#" class="flex gap-2 hover:text-amber-500"><i data-feather="video"></i> Lorem ipsum dolor sit</a>
+                            <a href="#" class="flex gap-2 hover:text-amber-500"><i data-feather="video"></i> Lorem, ipsum dolor</a>
+                            <a href="#" class="flex gap-2 hover:text-amber-500"><i data-feather="video"></i> Lorem ipsum dolor sit amet</a>
+                            <a href="#" class="flex gap-2 hover:text-amber-500"><i data-feather="video"></i> Lorem ipsum dolor sit amet consectetur</a>
+                            <a href="#" class="flex gap-2 hover:text-amber-500"><i data-feather="video"></i> Lorem ipsum dolor sit</a>
+                        </div>
+                    </div> -->
+                </div>
+                <div class="text-center mt-6 p-2">
+                    &lt;Programando&gt; criado por Fernando Nunes
+                </div>
+            </footer>
+        </main>
+    </div>
+    <!-- Modal Search -->
+    <div id="modal-search"
+        class="hidden w-full h-full bg-black bg-opacity-60 top-0 fixed sticky-0 flex justify-center transition-colors delay-150 duration-1000">
+        <div id="modal-box-search"
+            class="w-full max-w-4xl h-max max-h-screen overflow-y-auto -mt-48 p-5 bg-white rounded-md focus:animate-bounce transition-all duration-400">
+            <div class="flex items-center justify-between items-center">
+                <h2 class="font-bold flex items-center gap-3"><i data-feather="search"></i> Faça uma pesquisa</h2>
+                <button id="search-close" class="cursor-pointer">
+                    <i data-feather="x"></i>
+                </button>
+            </div>
+            <div class="flex mt-2 mb-4 p-4 w-full p-4 rounded-lg border border-gray-900">
+                <input id="input-search" type="text" class="grow outline-none" placeholder="Pesquisar">
+                <button id="button-search" class="cursor-pointer">
+                    <i data-feather="search"></i>
+                </button>
+            </div>
+            <div id="search-loader" class="hidden items-center justify-center w-full relative gap-6">
+                <span class="animate-ping inline-flex h-4 w-4 rounded-full bg-amber-400 opacity-75"></span>
+                <span class="animate-ping inline-flex h-4 w-4 rounded-full bg-amber-400 opacity-75"></span>
+                <span class="animate-ping inline-flex h-4 w-4 rounded-full bg-amber-400 opacity-75"></span>
+            </div>
+            <div id="search-result" class="flex mt-2 mb-4 p-4 w-full p-4 flex flex-col">
+            </div>
+        </div>
+    </div>
+    <!-- Modal Tags -->
+    <div id="modal-tags"
+        class="hidden w-full h-full bg-black bg-opacity-60 top-0 fixed sticky-0 flex justify-center transition-colors delay-150 duration-1000">
+        <div id="modal-box-tags"
+            class="w-full max-w-4xl h-max -mt-48 p-5 bg-white rounded-md focus:animate-bounce transition-all duration-400">
+            <div class="flex items-center justify-between items-center">
+                <h2 class="font-bold flex items-center gap-3"><i data-feather="tag"></i>Lista de Tags</h2>
+                <button id="tags-close" class="cursor-pointer">
+                    <i data-feather="x"></i>
+                </button>
+            </div>
+            <div class="flex mt-2 mb-4 p-4 w-full p-4 gap-4">
+                {% for tag in tag_list %}
+                <a href="{{ url }}/tag/{{ tag['slug'] }}" class="hover:text-amber-400 no-underline">{{ tag["name"] }}</a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <!-- <script type="text/js" src="../../../dist/assets/js/app.js"></script> -->
+    <script type="module" src="{{ url }}/assets/js/app.js"></script>
+    <script>
+        hljs.highlightAll();
+        document.querySelectorAll('code').forEach(el => {
+            const main = this;
+            el.classList.forEach(cl => {
+                if(cl !== hljs){
+                    let lang = cl.replace('language-', '');
+                    let span = document.createElement('span');
+                    span.textContent = lang;
+                    span.classList.add('absolute', 'p-1', 'm-1', 'right-0', 'bg-amber-500', 'text-black', 'text-sm');
+                    el.parentNode.prepend(span);
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

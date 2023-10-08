@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block title %}Postagem{% endblock %}
+
+{% block content %}
+<div class="p-2">
+    <h3 class="pr-4 flex gap-2"><i data-feather="calendar"></i> {{ date|date('d/m/Y') }}</h3>
+    <h1 class="text-4xl font-bold dark:text-cyan-50">{{ title }}</h1>
+    <div id="content" class="text-xl my-4 space-y-6">{{ content }}
+    <div class="flex gap-2 items-center text-sm uppercase"><i data-feather="tag"></i>
+{% for tag in tags %}<a href="{{ url }}/tag/{{ tag['slug'] }}" class="hover:text-amber-400">{{ tag['name'] }}</a>{% endfor %}
+    </div>
+</div>
+
+<div id="author-loader" class="p-4 flex w-full gap-2 mt-4 animate-pulse">
+    <div class="flex w-full gap-2">
+        <div class="rounded-full w-32 bg-slate-400"></div>
+        <div class="w-full">
+            <div class="loader rounded-xl w-full h-4 my-2 bg-slate-400"></div>
+            <div class="loader rounded-xl w-full h-10 bg-slate-400"></div>
+            <div class="flex gap-4">
+                <div class="flex items-center gap-2">
+                    <div class="loader rounded-xl w-16 h-4 my-2 bg-slate-400"></div>
+                </div>
+                <div class="flex items-center gap-2">
+                    <div class="loader rounded-xl w-16 h-4 my-2 bg-slate-400"></div>
+                </div>
+                <div class="flex items-center gap-2">
+                    <div class="loader rounded-xl w-16 h-4 my-2 bg-slate-400"></div>
+                </div>
+                <div class="flex items-center gap-2">
+                    <div class="loader rounded-xl w-16 h-4 my-2 bg-slate-400"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="author" class="hidden w-full flex gap-2 my-8">
+    <img class="rounded-full md:w-32 md:h-auto w-20 h-20 bg-slate-400"
+        src="https://avatars.githubusercontent.com/u/9018264?v=4" alt="Profile Pic">
+    <div class="flex-wrap">
+        <a class="font-bold text-lg" href="http://github.com/luizfnunes" target="_blank"></a>
+        <p class="text-justify"></p>
+        <div class="grid grid-cols-2 md:flex gap-4">
+            <div class="flex items-center gap-2">
+                <span id="repo" class="font-bold text-2xl">5</span>
+                <span>Repositórios</span>
+            </div>
+            <div class="flex items-center gap-2">
+                <span id="gists" class="font-bold text-2xl">5</span>
+                <span>Gists</span>
+            </div>
+            <div class="flex items-center gap-2">
+                <span id="followers" class="font-bold text-2xl">5</span>
+                <span>Seguidores</span>
+            </div>
+            <div class="flex items-center gap-2">
+                <span id="following" class="font-bold text-2xl">5</span>
+                <span>Seguindo</span>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

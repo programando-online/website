@@ -1,0 +1,24 @@
+{
+  "name": "programando",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "build":    "esbuild ./app/layout/default/assets/js/input.js --bundle --outfile=./dist/assets/js/app.js && npx tailwindcss -m -i ./app/layout/default/assets/css/input.css -o ./dist/assets/css/app.css",
+    "tw-watch": "npx tailwindcss -m -i ./app/layout/default/assets/css/input.css -o ./dist/assets/css/app.css --watch",
+    "es-watch": "esbuild ./app/layout/default/assets/js/input.js --bundle --outfile=./dist/assets/js/app.js && npx tailwindcss -m -i ./app/layout/default/assets/css/input.css -o ./dist/assets/css/app.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "esbuild": "0.19.4",
+    "tailwindcss": "^3.3.3"
+  },
+  "dependencies": {
+    "feather-icons": "^4.29.1"
+  }
+}

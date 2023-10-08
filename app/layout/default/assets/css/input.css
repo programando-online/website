@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    a {
+      @apply text-slate-800 underline dark:text-cyan-50 dark:hover:text-amber-400 hover:text-amber-400 transition duration-300 ease-in-out;
+    }
+    #content > ul{
+      @apply my-2;
+    }
+    #content ul ul{
+      @apply ml-4 mb-2 text-sm uppercase;
+    }
+  }

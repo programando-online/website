@@ -1,0 +1,13 @@
+site:
+  name: Programando
+  url: http://localhost:4000
+  max_items: 7
+folders:
+  pages: './app/pages'
+  posts: './app/posts'
+output:
+  dir: './dist/' 
+social:
+  github: 'https://github.com/luizfnunes'
+  youtube: 'https://www.youtube.com/@fernando.programador'
+  twitter: 'https://twitter.com/fernando_progrm'
