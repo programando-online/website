@@ -105,6 +105,7 @@ main .pagination-loader-container {
 }
 .gsc-comment-box-textarea-extras{
     background-color: #000;
+    border-color: #222;
 }
 .gsc-comments > .gsc-header {
     order: 1;
@@ -124,6 +125,9 @@ main .pagination-loader-container {
 .gsc-comment-box-tabs{
     background-color: #000;
     border-color: #000;
+}
+.gsc-comment-box-write textarea{
+    border-color: #222;
 }
 .gsc-comment-box-tabs button.color-bg-canvas{
     background-color: rgb(12 10 9);
