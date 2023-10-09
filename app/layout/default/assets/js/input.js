@@ -188,6 +188,20 @@ function get_user_data() {
         .catch(error => {
         });
 }
+
+function loadComments()
+{
+    // let comment_container = document.querySelector('#comments');
+    // if(comment_container !== null){
+    //     let theme = loadSaveTheme();
+    //     let script_theme = (theme === 'dark') ? 'dark-blue' : 'boxy-light';
+    //     comment_container.innerHTML = `<script src="https://utteranc.es/client.js" 
+    //     repo="programando-online/programando-comments" issue-term="pathname"
+    //     label="Comment" theme="${script_theme}" crossorigin="anonymous"async></script>`;
+    //     console.log('loaded');
+    // }
+}
+
 var metadata_url = "/search.json";
 var posts = [];
 var idx;
@@ -210,5 +224,5 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
     request.send();
-
+    loadComments();
 });
