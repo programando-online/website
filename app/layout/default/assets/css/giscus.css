@@ -106,6 +106,26 @@ main .pagination-loader-container {
 .gsc-comments > .gsc-header {
     order: 1;
 }
+.gsc-comment-box{
+    background-color: #fff;
+}
+.dark .gsc-comment-box{
+    background-color: #000;
+}
+.gsc-comment-box-tabs{
+    background-color: #FFF;
+}
+.dark .gsc-comment-box-tabs{
+    background-color: #000;
+}
+.gsc-comment-box-textarea{
+    background-color: #FFF;
+    color: #222;
+}
+.dark .gsc-comment-box-textarea{
+    background-color: #000;
+    color: #F1F1F1;
+}
 .gsc-comments > .gsc-comment-box {
     margin-bottom: 1rem;
     order: 2;
