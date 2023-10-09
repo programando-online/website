@@ -1,6 +1,6 @@
 site:
   name: Programando
-  url: https://programando.online/
+  url: https://programando.online
   max_items: 7
 folders:
   pages: './app/pages'

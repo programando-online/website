@@ -7,10 +7,13 @@ use Symfony\Component\Yaml\Yaml;
 class Config
 {
     private array $content;
-    public function __construct()
+    public function __construct($isLocal = false)
     {
         try {
             $this->content = Yaml::parseFile('./app/config.yml');
+            if($isLocal){
+                $this->content['site']['url'] = "http://localhost:4000";
+            }
         } catch (\Throwable $th) {
             throw $th;
         }

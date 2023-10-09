@@ -13,9 +13,9 @@ class Application
     private array $posts;
     private string $output;
 
-    public function __construct(string $templatePath, array $converterConfig = [])
+    public function __construct(string $templatePath, array $converterConfig = [], $isLocal = false)
     {
-        $this->config = new Config();
+        $this->config = new Config($isLocal);
         $this->output = $this->config->get('output', 'dir');
         $this->template = new Template($templatePath);
         $this->converter = new Converter($converterConfig);
