@@ -159,6 +159,15 @@ main .pagination-loader-container {
     background-color: rgb(251 191 36);
     border-color: rgb(251 191 36);
 }
+.gsc-reply-box{
+    background-color: rgb(12 10 9);
+    border-color: rgb(12 10 9);
+}
+.gsc-reply-box button.color-text-secondary{
+    background-color: #000;
+    color: #f1f1f1;
+    border-color: #222;
+}
 main .gsc-loading-image {
     background-image: url(https://github.githubassets.com/images/mona-loading-dimmed.gif);
 }
