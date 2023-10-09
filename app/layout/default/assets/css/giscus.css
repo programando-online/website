@@ -116,6 +116,9 @@ main .pagination-loader-container {
 .gsc-homepage-bg {
     background-color: #ffd8d3;
 }
+.dark .gsc-homepage-bg {
+    background-color: #004400;
+}
 main .gsc-loading-image {
     background-image: url(https://github.githubassets.com/images/mona-loading-dimmed.gif);
 }
