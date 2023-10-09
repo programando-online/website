@@ -34,16 +34,16 @@ jobs:
 
       - name: Execute Gen
         run: php gen run
-        
-      - name: Netlify Deploy
+      - name: Deploy Action For Netlify
         # You may pin to the exact commit or the version.
-        # uses: jsmrcaga/action-netlify-deploy@10294b8b3b9ad4f326eb45d2e5a904f4016c8f63
-        uses: jsmrcaga/action-netlify-deploy@v2.0.0
+        # uses: evnex/netlify-deploy@abf48989cdfe57397c9d0e748664964b438d6886
+        uses: evnex/netlify-deploy@1.0.4
         with:
-          # Auth token to use with netlify
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_TOKEN }}
-          # Your Netlify site id
-          NETLIFY_SITE_ID: 954bc5c4-fe39-4eeb-8b35-1a9a79276620
-          # Should the site be deployed to production?
-          # A deploy message
-          build_directory: dist
+          # Github token
+          github-token: ${{ secrets.GH_TOKEN }}
+          # Your Netlify personal access token (Please save it as a secret in your repo!)
+          netlify-auth-token: ${{ secrets.NETLIFY_TOKEN }}
+          # Your Netlify site's `API ID`
+          netlify-site-id: ${{ secrets.NETLIFY_ID }}
+          # The folder of the site want to deploy
+          build-dir: dist
