@@ -1,6 +1,6 @@
 site:
   name: Programando
-  url: https://resonant-puffpuff-0b0cdd.netlify.app/
+  url: https://programando.online/
   max_items: 7
 folders:
   pages: './app/pages'
