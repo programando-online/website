@@ -168,6 +168,14 @@ main .pagination-loader-container {
     color: #f1f1f1;
     border-color: #222;
 }
+.gsc-comment-box-textarea:focus{
+    background-color: #000;
+    color: #F1F1F1;
+    
+}
+.gsc-comment-box-write .input-contrast:focus{
+    background-color: transparent;
+}
 main .gsc-loading-image {
     background-image: url(https://github.githubassets.com/images/mona-loading-dimmed.gif);
 }
