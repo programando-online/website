@@ -6,9 +6,9 @@ tags:
 ---
 
 Olá, eu sou o Fernando e este é meu blog pessoal sobre programação.
-Decidi desenvolver esse site utilizando o PHP, linguagem que utilizo para programar atualmente. Porém, não utilizei da forma tradicional, rodando em um servidor, mas sim como um construtor de sites estáticos para gerar todo o conteúdo em HTML, CSS e Javascript. 
+Decidi desenvolver este site com o PHP, linguagem que utilizo para programar atualmente. Porém, não da forma tradicional, rodando em um servidor, mas sim como um construtor de sites estáticos para gerar todo o conteúdo em HTML, CSS e Javascript. 
 
-Como bibliotecas externas estou utilizando [CommomMark](https://github.com/thephpleague/commonmark), o [Slugify](https://github.com/cocur/slugify) e o [Twig](https://twig.symfony.com/). A primeira biblioteca faz a conversão do formato de arquivo Markdown e seus metadados para o HTML. O Slugify converte strings para slugs e o Twig é um motor de templates que gera uma saída totalmente em HTML.
+Como bibliotecas externas estou utilizando [CommomMark](https://github.com/thephpleague/commonmark), que faz a conversão do formato de arquivo Markdown e seus metadados para o HTML, o [Slugify](https://github.com/cocur/slugify), que formata strings para o formato slug, e o [Twig](https://twig.symfony.com/) que é um motor de templates que gera a partir de templates uma saída totalmente em HTML.
 
 Para gerar os aquivos de estilos do site utilizei o [TailwindCSS](https://tailwindcss.com/), mais precisamente o Tailwind-cli rodando em node-js. Ele analiza os arquivos de html do template e gera um CSS customizado, apenas com as classes utilizadas. O mesmo método utilizei para criar um bundle dos arquivos Javascript, porém com a ferramenta [ESBuild](https://esbuild.github.io/) fazendo todo o trabalho.
 
