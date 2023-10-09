@@ -254,6 +254,9 @@ class Application
         $output_file = $this->output . "assets/css/giscus.css";
         $css = $this->template->render('assets/css/giscus.css', []);
         Output::save($output_file, $css);
+        $output_file = $this->output . "netlify.toml";
+        $toml = $this->template->render('netlify.toml', []);
+        Output::save($output_file, $toml);
     }
     /* Utils */
     private function convertTagList(array $tags)
