@@ -103,26 +103,19 @@ main .pagination-loader-container {
 .gsc-header {
     padding-bottom: 1rem;
 }
+.gsc-comment-box-textarea-extras{
+    background-color: #000;
+}
 .gsc-comments > .gsc-header {
     order: 1;
 }
 .gsc-comment-box{
-    background-color: #fff;
-}
-.dark .gsc-comment-box{
     background-color: #000;
 }
 .gsc-comment-box-tabs{
-    background-color: #FFF;
-}
-.dark .gsc-comment-box-tabs{
     background-color: #000;
 }
 .gsc-comment-box-textarea{
-    background-color: #FFF;
-    color: #222;
-}
-.dark .gsc-comment-box-textarea{
     background-color: #000;
     color: #F1F1F1;
 }
@@ -135,9 +128,6 @@ main .pagination-loader-container {
 }
 .gsc-homepage-bg {
     background-color: #ffd8d3;
-}
-.dark .gsc-homepage-bg {
-    background-color: #004400;
 }
 main .gsc-loading-image {
     background-image: url(https://github.githubassets.com/images/mona-loading-dimmed.gif);
