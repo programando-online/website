@@ -110,10 +110,17 @@ main .pagination-loader-container {
     order: 1;
 }
 .gsc-comment-box{
-    background-color: #000;
+    background-color: rgb(12 10 9);
 }
 .gsc-comment-box-tabs{
     background-color: #000;
+    border-color: #000;
+}
+.gsc-comment-box-tabs button.color-bg-canvas{
+    background-color: rgb(12 10 9);
+}
+.gsc-comment-box-tabs button.color-border-primary{
+    border-color:  rgb(12 10 9);
 }
 .gsc-comment-box-textarea{
     background-color: #000;
