@@ -134,6 +134,7 @@ main .pagination-loader-container {
 }
 .gsc-comment-box-tabs button.color-border-primary{
     border-color:  rgb(12 10 9);
+    border-radius: 0;
 }
 .gsc-comment-box-textarea{
     background-color: #000;
@@ -142,6 +143,7 @@ main .pagination-loader-container {
 .gsc-comments > .gsc-comment-box {
     margin-bottom: 1rem;
     order: 3;
+    border-radius: 0;
 }
 .gsc-comments > .gsc-timeline {
     order: 2;
