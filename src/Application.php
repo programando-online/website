@@ -251,7 +251,7 @@ class Application
     private function renderAssets()
     {
         exec('npm run build');
-        $output_file = $this->output . "assets/css/giscus.css";
+        $output_file = $this->output . "assets/css/giscus.css"; 
         $css = $this->template->render('assets/css/giscus.css', []);
         Output::save($output_file, $css);
         $output_file = $this->output . "netlify.toml";
