@@ -141,10 +141,10 @@ main .pagination-loader-container {
 }
 .gsc-comments > .gsc-comment-box {
     margin-bottom: 1rem;
-    order: 2;
+    order: 3;
 }
 .gsc-comments > .gsc-timeline {
-    order: 3;
+    order: 2;
 }
 .gsc-homepage-bg {
     background-color: #ffd8d3;
