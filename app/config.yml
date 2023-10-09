@@ -1,6 +1,6 @@
 site:
   name: Programando
-  url: http://localhost:4000
+  url: https://resonant-puffpuff-0b0cdd.netlify.app/
   max_items: 7
 folders:
   pages: './app/pages'
