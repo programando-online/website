@@ -109,6 +109,13 @@ main .pagination-loader-container {
 .gsc-comments > .gsc-header {
     order: 1;
 }
+.gsc-comment .color-bg-primary{
+    background-color: #000;
+}
+.gsc-comment .gsc-comment-header{
+    background-color: rgb(12 10 9);
+    padding-bottom: 5px;
+}
 .gsc-comment-box{
     background-color: rgb(12 10 9);
 }
@@ -135,6 +142,14 @@ main .pagination-loader-container {
 }
 .gsc-homepage-bg {
     background-color: #ffd8d3;
+}
+.gsc-comment-box-buttons .btn-primary{
+    background-color: rgb(245 158 11);
+    border-color: rgb(245 158 11);
+}
+.gsc-comment-box-buttons .btn-primary:hover{
+    background-color: rgb(251 191 36);
+    border-color: rgb(251 191 36);
 }
 main .gsc-loading-image {
     background-image: url(https://github.githubassets.com/images/mona-loading-dimmed.gif);
