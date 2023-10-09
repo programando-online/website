@@ -113,6 +113,7 @@ main .pagination-loader-container {
 .gsc-comment .color-bg-primary{
     background-color: #000;
     border-color: #000;
+    border-radius: 0 !important;
 }
 .gsc-comment .gsc-comment-header{
     background-color: rgb(12 10 9);
@@ -134,7 +135,6 @@ main .pagination-loader-container {
 }
 .gsc-comment-box-tabs button.color-border-primary{
     border-color:  rgb(12 10 9);
-    border-radius: 0;
 }
 .gsc-comment-box-textarea{
     background-color: #000;
