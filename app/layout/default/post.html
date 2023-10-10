@@ -1,6 +1,14 @@
 {% extends "base.html" %}
 
-{% block title %}Postagem{% endblock %}
+{% block title %}{{ title}} | {{ name }}{% endblock %}
+
+{% block seo %} 
+<meta property="og:title" content="{{ title }}" />
+<meta property="og:description" content="{{ excerpt }}" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="{{ url }}/post/{{ slug }}" />
+<meta property="og:image" content="https://dynamic-og-image-generator.vercel.app/api/generate?title={{ title }}&author=Fernando+Nunes&websiteUrl=https%3A%2F%2Fprogramando.online&avatar=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F9018264&theme=nightOwl" />
+{% endblock %}
 
 {% block content %}
 <div class="p-2">

@@ -165,6 +165,8 @@ class Application
                 'date' => $post->header['date'],
                 'tags' => $post->header['tags'], //$this->convertTagList($post->header['tags']),
                 'content' => $post->content,
+                'slug' => $post->slug,
+                'excerpt' => $post->excerpt
             ];
             $html = $this->template->render('post.html', $data);
             Output::save($output_file, $html);

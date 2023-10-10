@@ -1,10 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}{% endblock %}</title>
+    <link rel="canonical" href ="{{ url }}"/>
+    <meta name="description" content="Um blog sobre programação moderna. Artigos sobre sistemas operacionais, desenvolvimento de software, aquitetura de computadores e linguagens de programação."> 
+    <meta name="keywords" content="linguagens de programação, software, desenvolvimento web, php, java, d-lang">
+    <meta name="language" content="Portuguese">
+    <meta name="robots" content="">
+    <meta name="revisit-after" content="1 day">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    {% block seo %}{% endblock %}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cuprum:wght@500&family=Lato:wght@100;300;700&display=swap"
