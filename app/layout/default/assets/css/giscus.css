@@ -155,6 +155,11 @@ main .pagination-loader-container {
     background-color: rgb(245 158 11);
     border-color: rgb(245 158 11);
 }
+.gsc-comment-box-buttons .btn-primary:disabled,
+.gsc-comment-box-buttons .btn-primary[disabled]{
+    opacity: 0.5;
+    color: #333;
+}
 .gsc-comment-box-buttons .btn-primary:hover{
     background-color: rgb(251 191 36);
     border-color: rgb(251 191 36);
