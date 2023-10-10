@@ -185,7 +185,8 @@ main .pagination-loader-container {
     border-radius: 0;
 }
 .BtnGroup-item--selected{
-    background-color: rgb(12 10 9);
+    background-color: rgb(12 10 9) !important;
+    border-color: rgb(12 10 9) !important;
 }
 main .gsc-loading-image {
     background-image: url(https://github.githubassets.com/images/mona-loading-dimmed.gif);
