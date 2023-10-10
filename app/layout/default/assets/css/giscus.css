@@ -188,6 +188,10 @@ main .pagination-loader-container {
     background-color: rgb(12 10 9) !important;
     border-color: rgb(12 10 9) !important;
 }
+.gsc-replies{
+    background-color: #000;
+    border-color: #222;
+}
 main .gsc-loading-image {
     background-image: url(https://github.githubassets.com/images/mona-loading-dimmed.gif);
 }
