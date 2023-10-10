@@ -181,6 +181,12 @@ main .pagination-loader-container {
 .gsc-comment-box-write .input-contrast:focus{
     background-color: transparent;
 }
+.BtnGroup-item{
+    border-radius: 0;
+}
+.BtnGroup-item--selected{
+    background-color: rgb(12 10 9);
+}
 main .gsc-loading-image {
     background-image: url(https://github.githubassets.com/images/mona-loading-dimmed.gif);
 }
