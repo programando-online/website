@@ -145,7 +145,8 @@ class Application
                 ...$this->getDefaultData(),
                 'title' => $page->title,
                 'content' => $page->content,
-                'slug' => $page->slug
+                'slug' => $page->slug,
+                'textencoded' => urlencode($page->title)
             ];
             $html = $this->template->render('page.html', $data);
             Output::save($output_file, $html);
@@ -167,7 +168,8 @@ class Application
                 'tags' => $post->header['tags'], //$this->convertTagList($post->header['tags']),
                 'content' => $post->content,
                 'slug' => $post->slug,
-                'excerpt' => $post->excerpt
+                'excerpt' => $post->excerpt,
+                'textencoded' => urlencode($post->title)
             ];
             $html = $this->template->render('post.html', $data);
             Output::save($output_file, $html);
@@ -230,7 +232,8 @@ class Application
                     'num_pages' => count($paginated),
                     'actual_page' => $i,
                     'tag' => $tagItem['name'],
-                    'slug' => $tagItem['slug']
+                    'slug' => $tagItem['slug'],
+                    'textencoded' => urlencode($tagItem['name'])
                 ];
                 $html = $this->template->render('tag.html', $data);
                 Output::save($output_file, $html);
