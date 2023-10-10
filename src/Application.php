@@ -145,6 +145,7 @@ class Application
                 ...$this->getDefaultData(),
                 'title' => $page->title,
                 'content' => $page->content,
+                'slug' => $page->slug
             ];
             $html = $this->template->render('page.html', $data);
             Output::save($output_file, $html);
